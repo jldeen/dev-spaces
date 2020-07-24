@@ -11,7 +11,7 @@ The following Action snippet is used in the [Bikesharing sample PR workflow ](ht
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}  
         host: ${{ secrets.HOST }}
-        child-space: ${{steps.generate-child-space-name.outputs.result}}
+        main-namespace: ${{steps.generate-main-namespace-name.outputs.result}}
         protocol: 'http'
  ```       
 where:
