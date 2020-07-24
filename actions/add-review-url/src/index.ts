@@ -7,11 +7,11 @@ async function run() {
     const addComment = new AddComment();
     try {
         const host = core.getInput('host');
-        let headref = core.getInput('child-space') || '';
+        let headref = core.getInput('namespace') || '';
         let protocol = core.getInput('protocol') || 'http';
-        const comment = `You can see a private version of the changes made in this pull request here:\n${protocol}://${headref}.s.${host}/`;   
+        const comment = `You can see a private version of the changes made in this pull request here:\n${protocol}://${headref}.${host}/`;
         await addComment.addComment(comment);
-    }catch (error) {
+    } catch (error) {
         core.setFailed(error.message);
     }
 }

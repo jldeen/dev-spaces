@@ -7,7 +7,7 @@ Refer to the documentation for [Azure Dev-spaces sample app](https://github.com/
 ## Example workflow syntax 
 The following Action snippet is used in the [Bikesharing sample PR workflow ](https://github.com/Azure/dev-spaces/blob/master/.github/workflows/bikes.yml)
 ```
-    - uses: azure/dev-spaces/actions/add-review-url@Releases/v1              
+    - uses: azure/dev-spaces/actions/add-review-url@Releases/v2              
         with:
             repo-token: ${{ secrets.GITHUB_TOKEN }}  
             host: ${{ secrets.HOST }}
