@@ -28,7 +28,7 @@ function run() {
         const addComment = new AddReviewUrl_1.default();
         try {
             const host = core.getInput('host');
-            let headref = core.getInput('namespace') || '';
+            let headref = core.getInput('branch-name') || '';
             let protocol = core.getInput('protocol') || 'http';
             const comment = `You can see a private version of the changes made in this pull request here:\n${protocol}://${headref}.${host}/`;
             yield addComment.addComment(comment);

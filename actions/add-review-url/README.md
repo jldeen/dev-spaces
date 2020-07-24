@@ -10,6 +10,7 @@ The following Action snippet is used in the [Bikesharing sample PR workflow ](ht
     - uses: azure/dev-spaces/actions/add-review-url@Releases/v2              
         with:
             repo-token: ${{ secrets.GITHUB_TOKEN }}  
+            branch-name: ${{steps.generate-valid-branch-name.outputs.result}}
             host: ${{ secrets.HOST }}
  ```       
 where secrets.HOST is the host URL for the app deployed in AKS. See [Pull Request Flow Documentation for Azure Dev Spaces](https://aka.ms/devspaces/pr-flow#configure-your-github-action)
